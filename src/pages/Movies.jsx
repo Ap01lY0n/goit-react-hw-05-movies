@@ -1,7 +1,7 @@
 /** @format */
 
 import { useEffect, useState } from 'react';
-import { Outlet, useLocation, useSearchParams } from 'react-router-dom';
+import { useLocation, useSearchParams } from 'react-router-dom';
 import { toastWindow, toastInfo } from '../components/utils/toastwindow.js';
 import { fetchFilmsItems } from '../components/utils/fetch_api.js';
 import MoviesRender from '../components/MoviesRender';
@@ -103,7 +103,6 @@ const Movies = () => {
 				onClickLastPageButton={onClickLastPageButton}
 				onClickChangePage={onClickChangePage}
 			/>
-			<Outlet />
 		</>
 	);
 };

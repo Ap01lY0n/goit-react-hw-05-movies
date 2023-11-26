@@ -21,17 +21,15 @@ const Reviews = () => {
 
 	useEffect(() => {
 		fetchMovieOption(id, 'reviews')
-			.then(({ data }) => {
-				setOption(data.results);
-			})
+			.then(({ data }) => setOption(data.results))
 			.catch(error => toastWindow(`Error loading reviews (${error})`));
 	}, [id]);
 
 	return (
 		<>
-			{option !== null ? (
+			{option && (
 				<>
-					{option.length > 0 ? <Title>Reviews</Title> : null}
+					{option.length > 0 && <Title>Reviews</Title>}
 					<ContentBlock>
 						{option.length > 0 ? (
 							option.map(item => {
@@ -51,7 +49,7 @@ const Reviews = () => {
 						)}
 					</ContentBlock>
 				</>
-			) : null}
+			)}
 		</>
 	);
 };

@@ -19,7 +19,7 @@ export const MovieLink = styled(Link)`
 	display: flex;
 	justify-content: left;
 	align-items: center;
-	width: 40%;
+	width: 80%;
 	padding: 20px 50px;
 	border: 1px solid lightgray;
 	border-radius: 6px;
@@ -29,4 +29,16 @@ export const MovieLink = styled(Link)`
 		background-color: #ffe4c453;
 		transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	}
+`;
+export const MoviesList = styled.ul`
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+`;
+
+export const MoviesListItem = styled.li`
+  flex: 0 0 50%;
+  box-sizing: border-box;
+  padding: 8px;
 `;
